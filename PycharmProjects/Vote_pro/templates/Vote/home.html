@@ -1,0 +1,12 @@
+{% if question_list %}
+
+{% for question in question_list %}
+
+<a href="{{ question.id }}/" >{{ question.question_text }}</a>
+
+{% endfor %}
+{% else %}
+<p>NO Questions Availble</p>
+{% endif %}
+
+

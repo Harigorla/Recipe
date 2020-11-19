@@ -1,0 +1,9 @@
+{% if x %}
+    <ul>
+    {% for y in x %}
+        <a href="{{ y.id }}">{{ y.q_text }}</a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <a href="{{ y.id }}"><p>No Polls Not Availble</p></a>
+{% endif %}
