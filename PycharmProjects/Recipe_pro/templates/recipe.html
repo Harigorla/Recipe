@@ -1,6 +1,9 @@
-<form method="post">
-    {% csrf_token %}
-    {{ fform.as_p }}
-    <input type="submit" value="submit">
+<h1>{{ order_list.name }}</h1>
 
-</form>
+<ul>
+{% for choice in recipe.choice_set.all %}
+    <li>{{ oder_list.name }} -- vote{{ order_list.name|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'detail' recipe.id %}">Vote again?</a>

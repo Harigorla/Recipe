@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b)-djr@t*phe=w*^kgbyc*hd^3sg^0-gvakq=jx&=z7v$*=v9i'
+SECRET_KEY = 'a6*+p-60_zr6@c9*g&yvn+f0q#!uc@-x8+9t28g%(1(gt6k16p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Recipe_pro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dosadb',
+        'NAME': 'bng',
         'USER':'root',
         'PASSWORD':'root',
     }

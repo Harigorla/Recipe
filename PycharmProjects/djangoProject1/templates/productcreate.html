@@ -1,0 +1,5 @@
+<form method="post">
+    {% csrf_token %}
+    {{ pform.as_p }}
+    <a href="/{% url 'producthome' %}"><input type="submit" value="submit"></a>
+</form>

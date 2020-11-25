@@ -1,0 +1,7 @@
+{% if menu_list %}
+    <ul>
+    {% for menu in menu_list %}
+        <a href="/{{ menu.id }}">{{ menu.name }}</a>
+    {% endfor %}
+    </ul>
+{% endif %}

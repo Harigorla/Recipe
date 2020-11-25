@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Django default" uuid="6cedb322-f38c-418d-a869-6c7126ce3fc2">
+    <data-source source="LOCAL" name="Django default" uuid="18f783ae-3712-43d0-9350-76bcb1636c21">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
-      <remarks>$PROJECT_DIR$/Vote_pro/settings.py</remarks>
+      <remarks>$PROJECT_DIR$/vote_pro/settings.py</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3306/votedb</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/reddy</jdbc-url>
     </data-source>
   </component>
 </project>

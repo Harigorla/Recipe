@@ -1,0 +1,7 @@
+{% if public %}
+    <ul>
+    {% for man in public %}
+        <a href="/{{ man.id }}">{{ man.productname }}</a>
+    {% endfor %}
+    </ul>
+{% endif %}

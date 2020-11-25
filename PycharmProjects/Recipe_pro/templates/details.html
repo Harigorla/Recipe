@@ -1,5 +1,8 @@
-<h1>{{ recipe.name }}</h1>
+<h1>{{ order_list.name }}</h1>
 
-{% for choice in recipe %}
-    <li>{{ recipe.id }}--{{ recipe.name }}</li>
+<form action="{% url 'details' order_list.id %}" method="post">
+{% csrf_token %}
+{% for choice in order_list %}
+    <a href="/{{ order_list.id }}">{{ order_list.name }}</a>
 {% endfor %}
+</form>

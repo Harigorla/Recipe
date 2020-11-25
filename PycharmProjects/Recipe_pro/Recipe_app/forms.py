@@ -1,9 +1,9 @@
+from django.forms import ModelForm
+from .models import NameList
 
-from django import forms
-from .models import Recipe
 
-class RecipeForm(forms.ModelForm):
+class NameForm(ModelForm):
 
     class Meta:
-        model=Recipe
-        fields='__all__'
+        model = NameList
+        fields = '__all__'

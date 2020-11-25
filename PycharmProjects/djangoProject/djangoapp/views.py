@@ -1,31 +1,15 @@
-from django.shortcuts import render , get_object_or_404
-from django.http import HttpResponse , HttpResponseRedirect
-from .models import Question , Choice
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse
 from django.urls import reverse
+from .models import MenuName
+from .forms import MenuForm
 
-def index(request):
 
-    question_list = Question.objects.order_by('pub_date')[:5]
-    return render(request,'index.html',{'question_list':question_list})
+def home(request):
+    menu_list = MenuName.objects.order_by('name')
+    return render(request, 'menu.html', {'menu_list': menu_list})
 
-def detail(request , question_id):
 
-    question = Question.objects.get(pk=question_id)
-    return render(request,'detail.html',{'question':question})
-def results(request , question_id):
-
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request,'results.html',{'question':question})
-
-def Vote(request , question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    try:
-        select_choice = question.choice_set.get(pk=request.POST['choice'])
-    except (KeyError , Choice.DoesNotExist):
-
-        return render(request,'detail.html',{'question':question,
-                                             'error_message':'you didnot select'})
-    else:
-        select_choice.votes +=1
-        select_choice.save()
-    return HttpResponseRedirect(reverse('results',args=(question.id,)))
+def detail(request, id):
+    menu =get_object_or_404(MenuName, pk=id)
+    return render(request, 'detail.html', {'menu': menu})

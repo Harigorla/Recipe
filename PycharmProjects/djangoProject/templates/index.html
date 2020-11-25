@@ -1,9 +1,0 @@
-
-{% if question_list %}
-    <ul>
-    {% for question in question_list %}
-        <a href="/{{ question.id }}">{{ question.question_text }}</a>
-    {% endfor %}
-    </ul>
-
-{% endif %}

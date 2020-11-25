@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from djangoapp import views
+from djangoApp import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('in/',views.index),
+    path('menu/',views.home, name='name'),
+    path('<int:id>/', views.detail, name='detail'),
 ]

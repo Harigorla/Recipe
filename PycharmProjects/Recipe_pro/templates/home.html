@@ -1,8 +1,7 @@
 {% if order_list %}
     <ul>
-    {% for unoder_list in order_list %}
-        <li>{{ unoder_list.name }}</li>
+    {% for item in order_list %}
+        <a href="/{{ item.id }}">{{ item.name }}</a>
     {% endfor %}
     </ul>
 {% endif %}
-
